@@ -1,0 +1,89 @@
+#addtobasketmain{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,2fr));
+    gap: 2rem;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid red; */
+    /* height: 200px; */
+}
+
+#addtobasketleft{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,2fr));
+    gap: 0.6rem;
+    width: 100%;
+}
+#addtobasketright{
+    width: 80%;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+#addtobasketleft>div>img{
+    width: 100%;
+}
+#addtobasketleft>div>img:hover{
+    width: 102%;
+    cursor:pointer;
+}
+#addtobasketright{
+    /* border: 1px solid green; */
+    text-align: left;
+}
+#namediv{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px,3fr));
+
+}
+
+.varientpriceadd{
+    text-decoration: line-through;
+}
+#onesize{
+    padding: 10px;
+    background-color: white;
+    border-radius: 1rem;
+    font-size: 17px;
+    margin-top: 0.7rem;
+    margin-bottom: 2rem;
+}
+#selectid{
+    padding: 10px 30px 10px 30px;
+    background-color: white;
+    border-radius: 1rem;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-top: 0.7rem;
+}
+#addtobasket{
+    width: 90%;
+    height: auto;
+
+}
+#addtobasket>button{
+    width: 100%;
+    padding: 15px 20px 15px 20px;
+    background-color: blue;
+    border: none;
+    color: white;
+    text-align: center;
+    /* font-weight: bold; */
+    font-size: 19px;
+    border-radius: 1rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+#addtobasket>button:hover{
+   
+    cursor: pointer;
+}
+#homeh4{
+    margin-top: 2rem;
+}
+#inter1{
+    margin-top: 2rem;
+}
+#inter2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

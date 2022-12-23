@@ -1,0 +1,82 @@
+#homepagenavbar{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-bottom: 2rem;
+}
+#homepagenavbar>img{
+width: 100%;
+height: 10rem;
+}
+#homepageimgs{
+    width: 90%;
+  
+    display: grid;
+    gap: 1rem;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px,3fr));
+}
+#homepageimgs>div>img{
+    width: 100%;
+}
+#homepageslider{
+    width: 90%;
+    
+    /* border: 1px solid red; */
+    margin: auto;
+}
+#homepageslider{
+    margin-bottom: 5rem;
+}
+#homepageslider>h1{
+    text-align: left;
+}
+#homepagesliderbottom{
+
+    width: 90%;
+    margin: auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px,6fr));
+}
+#homepagesliderbottom>div>img{
+    width: 100%;
+}
+#trendingnow{
+    width: 90%;
+    /* border: 2px solid red; */
+    margin: auto;
+   margin-bottom: 2rem;
+    text-align: left;
+}
+
+
+#banner{
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+}
+#banner>img{
+    width: 100%;
+}
+#moretoexplore{
+    display: grid;
+    gap: 2rem;
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px,3fr));
+}
+#moretoexplore>div>img{
+    width: 100%;
+}
+#banner1{
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+#banner1>img{
+    width: 100%;
+}

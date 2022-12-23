@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CircularProgress, Progress } from '@chakra-ui/react'
 import "./Paymentsuccess.css"
+import { Otp } from './Otp'
 // import Timer from './Timer'
 export const Paymentsuccess = () => {
     let localdata=JSON.parse(localStorage.getItem("alldata")) || []
@@ -41,8 +42,8 @@ export const Paymentsuccess = () => {
     },[count])
 
     useEffect(()=>{
-        if(count==286){
-            navigate("/")
+        if(count==290){
+            navigate("/otp")
             
         }
         if(count<=0){
@@ -54,11 +55,7 @@ export const Paymentsuccess = () => {
    
   return (
     <>
-    {
-       count<=290?<div id='spinner'>
-        <h1>Payment Successful</h1>
-        <img src="https://agazella.com/wp-content/uploads/2021/03/payment_successful.gif"alt="" />
-       </div>:
+   
     
     <div>
 
@@ -100,7 +97,7 @@ export const Paymentsuccess = () => {
         <img src="https://secure.ccavenue.com/transaction/images/ccavenue-logo-100x15.png" alt="" />
     </div>
     </div>
-}
+
     </>
   )
 }

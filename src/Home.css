@@ -5,6 +5,9 @@
     /* border: 1px solid red; */
     margin-bottom: 2rem;
 }
+#homepagemain{
+    margin-top: 2rem;
+}
 #homepagenavbar>img{
 width: 100%;
 height: 10rem;

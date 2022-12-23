@@ -9,11 +9,15 @@ import Addtobasket from './Addtobasket';
 // import { Router } from 'react-router-dom';
 import Allroutes from './Allroutes';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import WithSubnavigation from './components/Nav';
 
 function App() {
   return (
     <div className="App">
       {/* <h1>welcome</h1> */}
+      <Navbar/>
+      {/* <WithSubnavigation/> */}
       <Allroutes/>
       <Footer/>
        {/* <Main/> 

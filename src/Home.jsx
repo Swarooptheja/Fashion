@@ -10,6 +10,7 @@ function Home(props) {
     }
     return (
         <div id='homepagemain'>
+            
             <div id='homepagenavbar'>
                 
              <SimpleSlider/>

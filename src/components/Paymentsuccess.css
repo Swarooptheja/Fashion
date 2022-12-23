@@ -1,9 +1,9 @@
 #paymentsuccessmain{
     width: 40%;
     /* border: 1px solid red; */
-    height: 60vh;
+    height: auto;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 2rem;
     background-color: white;
     /* margin-top: 10rem; */
 }
@@ -21,7 +21,7 @@
    
     width: 30%;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 3rem;
 
 }
 

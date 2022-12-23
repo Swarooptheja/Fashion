@@ -1,8 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import SimpleSlider from './Banner';
 import Carousel from './Carousel';
 import "./Home.css"
 function Home(props) {
+    let navigate=useNavigate()
+    let handleclick=()=>{
+        navigate("/main")
+    }
     return (
         <div id='homepagemain'>
             <div id='homepagenavbar'>
@@ -13,7 +18,7 @@ function Home(props) {
 
 
           
-            <div id='homepageimgs'>
+            <div id='homepageimgs'onClick={handleclick} >
                 <div>
                     <img src="https://images.ctfassets.net/5de70he6op10/UZBe3AKFvj6pZ5ZwGgFb5/36c352507e317232f6f0dc9fa0b08262/120522_HPG_SS_M4.jpg?w=1125&q=80&fm=webp" alt="" />
                 </div>
@@ -44,7 +49,7 @@ function Home(props) {
                 
             </div>
 
-            <div id="banner">
+            <div id="banner" onClick={handleclick}>
                 <img src="https://images.ctfassets.net/5de70he6op10/6By9sDtTOuhwIliZuLqIs9/b9cf19c0e0d4a9343b772e3f90a5ad53/120522_HPG_LS_M3.jpg?w=2640&q=80&fm=webp" alt="" />
             </div>
 
@@ -59,7 +64,7 @@ function Home(props) {
             </div>
 
                 <h2 id='trendingnow'>Trending Now</h2>
-            <div id='homepagesliderbottom'>
+            <div id='homepagesliderbottom' onClick={handleclick}>
                 <div>
                     <img src="https://images.urbndata.com/is/image/Anthropologie/4130347470058_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349" alt="" />
                 </div>
@@ -80,7 +85,7 @@ function Home(props) {
                 </div>
             </div>
               <h2>More To Explore</h2>
-            <div id="moretoexplore">
+            <div id="moretoexplore" onClick={handleclick} >
                 <div>
                     <img src="https://images.ctfassets.net/5de70he6op10/3O1QxXVRnPnvmiO7l67Hsr/38f1b90088ff348a1133c85a956c26da/MTE_2.jpg?w=856&q=80&fm=webp" alt="" />
                 </div>

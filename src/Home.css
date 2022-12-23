@@ -11,7 +11,7 @@ height: 10rem;
 }
 #homepageimgs{
     width: 90%;
-  
+     cursor: pointer;
     display: grid;
     gap: 1rem;
     margin: auto;
@@ -33,7 +33,7 @@ height: 10rem;
     text-align: left;
 }
 #homepagesliderbottom{
-
+   cursor: pointer;
     width: 90%;
     margin: auto;
     display: grid;
@@ -64,6 +64,7 @@ height: 10rem;
     display: grid;
     gap: 2rem;
     width: 90%;
+    cursor: pointer;
     margin: auto;
     margin-top: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(300px,3fr));
@@ -74,6 +75,7 @@ height: 10rem;
 #banner1{
     width: 90%;
     margin: auto;
+    cursor: pointer;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }

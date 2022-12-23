@@ -1,0 +1,42 @@
+#paymentsuccessmain{
+    width: 40%;
+    /* border: 1px solid red; */
+    height: 60vh;
+    margin: auto;
+    margin-top: 15%;
+    background-color: white;
+    /* margin-top: 10rem; */
+}
+
+#payingto{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+#payingto>div{
+    line-height: 2px;
+}
+#spinner{
+   
+    width: 30%;
+    margin: auto;
+    margin-top: 20%;
+
+}
+
+#porewdvy{
+    width: 30%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+#theja{
+    width: 40%;
+    margin: auto;
+}
+
+#dlasfjldfj{
+    width: 50%;
+    margin: auto;
+}

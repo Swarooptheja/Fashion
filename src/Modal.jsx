@@ -10,9 +10,24 @@ import {
     Button,
   } from '@chakra-ui/react'
   import { useDisclosure } from '@chakra-ui/react'
+import { useSelector } from "react-redux"
 //   variantprice={{el.variant_price}} producttype={el.product_type}  actual_color={el. actual_color} size={el.size} brand={el.brand} title={el.title} 
-function TransitionExample({photo,variantprice,producttype,size,actual_color,brand,title}) {
+function TransitionExample({ID,photo,variantprice,producttype,size,actual_color,brand,title}) {
     const { isOpen, onOpen, onClose } = useDisclosure()
+    let data=useSelector((state)=>{
+      return state.mainArr
+    })
+    let localdata=JSON.parse(localStorage.getItem("alldata")) || []
+    let addtobasket=()=>{
+      let filterdata=data.filter((el)=>{
+        return el.ID===ID
+      })
+
+      localdata.push(filterdata)
+      localStorage.setItem("alldata",JSON.stringify(localdata))
+      alert("product added to the cart succefully")
+
+    }
     return (
       <>
         <Button color="white" cursor="pointer" bg="blue" border="none" _hover="none" onClick={onOpen}>ADD TO BASKET</Button>
@@ -33,7 +48,7 @@ function TransitionExample({photo,variantprice,producttype,size,actual_color,bra
                 <h5>Brand:{brand}</h5>
                 <h5>Price:{variantprice}</h5>
                 <h5>Size:{size}</h5>
-                <Button color="white" cursor="pointer" bg="red" border="none" _hover="none" >ADD TO BASKET</Button>
+                <Button color="white" cursor="pointer" bg="red" border="none" _hover="none" onClick={addtobasket} >ADD TO BASKET</Button>
                </div>
               
             </ModalBody>

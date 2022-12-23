@@ -1,8 +1,8 @@
-import { success } from "./Types"
+import { login, success } from "./Types"
 
 
 let initdata={
-
+   isAuth:false,
     mainArr :[
        
         {
@@ -26937,6 +26937,12 @@ let reducer=(state=initdata,action)=>{
       return {
          ...state,
          presentdata:action.payload
+      }
+   }
+   if(action.type==login){
+      return {
+         ...state,
+         isAuth:true
       }
    }
     return state

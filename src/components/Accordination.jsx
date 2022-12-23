@@ -7,6 +7,7 @@ import {
     AccordionIcon,
     Box
   } from '@chakra-ui/react'
+  
 export const Accordination = () => {
   return (
     <div id='accordion'>
@@ -17,9 +18,11 @@ export const Accordination = () => {
         <Box as="span" flex='1' textAlign='left' fontWeight="bold"  >
           Show More
         </Box>
+        
         <AccordionIcon />
       </AccordionButton>
     </h2>
+    
     <AccordionPanel pb={4}>
     <div className='offerinside'>
                 <div >

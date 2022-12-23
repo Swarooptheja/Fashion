@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Addtobasket from './Addtobasket';
 import Cartpage from './components/Cartpage';
+import { Login } from './components/Login';
 import Ordersummary from './components/Ordersummary';
 import { Otp } from './components/Otp';
 import { Payment } from './components/Payment';
@@ -23,6 +24,7 @@ function Allroutes(props) {
          <Route path='/paymentsuccess' element={<Paymentsuccess/>} />
          <Route path='/success' element={<Success/>} />
          <Route path='/otp' element={<Otp/>} />
+         <Route path='/login' element={<Login/>} />
            </Routes>
     )
 }

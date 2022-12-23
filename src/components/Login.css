@@ -1,0 +1,21 @@
+#submitbtn{
+    width: 30%;
+    padding: 10px 40px 10px 40px;
+    margin-top: 3rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 1rem;
+}
+#submitbtn:hover{
+    background-color: rgb(120, 120, 223);
+    color: white;
+}
+#submitbtn:disabled{
+background-color: rgb(198, 198, 241);
+}
+#submitbtn:disabled:hover{
+    cursor: not-allowed;
+}

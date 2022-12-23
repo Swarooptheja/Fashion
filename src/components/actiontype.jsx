@@ -31,10 +31,10 @@ let Loginsuccess=(payload)=>{
 }
 
 let getdata=(payload)=>(dispatch)=>{
-    axios.post("https://reqres.in/api/login",payload)
+    return axios.post("https://reqres.in/api/login",payload)
     .then((res)=>{
-        console.log(res.data)
-        dispatch(Loginsuccess(res.data))
+        // console.log(res.data)
+        return dispatch(Loginsuccess(res.data))
     })
 }
 

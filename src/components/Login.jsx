@@ -22,6 +22,9 @@ import {
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { getdata } from './actiontype';
+import { login } from './Types';
+import { useLocation, useNavigate } from 'react-router-dom';
 export const Login = () => {
     let initdata={
         email:'',
@@ -36,12 +39,19 @@ export const Login = () => {
         })
     }
     let dispatch=useDispatch()
+    let navigate=useNavigate()
+    let location=useLocation()
     let handlesubmit=()=>{
         let payload={
             email:states.email,
             password:states.password
         }
-        
+        dispatch(getdata(payload))
+       .then((res)=>{
+        if(res.type==login){
+          navigate(location.state.from || "/", {replace:"true"})
+        }
+       })
        
     }
     // console.log(states)
@@ -59,19 +69,26 @@ export const Login = () => {
       <div id='loginmain'>
       <FormControl isInvalid={isError}>
       {/* <FormLabel>Email</FormLabel> */}
-      <Input type='email' placeholder='Enter your email here'  name="email" value={states.email} onChange={handlechange} />
+      <div>
+
+      <Input type='email' placeholder='Enter your email here'  name="email" value={states.email} onChange={handlechange}   width='auto' />
+      </div>
       {!isError ? (
         <FormHelperText>
          
         </FormHelperText>
       ) : (
-        <FormErrorMessage>Email is required.</FormErrorMessage>
+        ""
+        // <FormErrorMessage>Email is required.</FormErrorMessage>
       )}
     </FormControl>
     <FormControl isInvalid={ispassword}>
+      <div>
+        
+      </div>
       <InputGroup size="md">
       <Input type={show ? 'text' : 'password'}
- placeholder='Enter your password here' name="password" value={states.password} onChange={handlechange} />
+ placeholder='Enter your password here' name="password" value={states.password} onChange={handlechange} width='auto' />
       <InputRightElement width='4.5rem'>
         <Button h='1.75rem' size='sm' onClick={handleClick}>
           {show ? 'Hide' : 'Show'}
@@ -83,7 +100,8 @@ export const Login = () => {
          
         </FormHelperText>
       ) : (
-        <FormErrorMessage>Password is required.</FormErrorMessage>
+        ""
+        // <FormErrorMessage>Password is required.</FormErrorMessage>
       )}
       </InputGroup>
     </FormControl>

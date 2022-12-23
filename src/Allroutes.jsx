@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Addtobasket from './Addtobasket';
+import { Authorization } from './components/Authorization';
 import Cartpage from './components/Cartpage';
 import { Login } from './components/Login';
 import Ordersummary from './components/Ordersummary';
@@ -18,12 +19,12 @@ function Allroutes(props) {
          <Route path='/' element={<Home/>}/>
          <Route path='/main' element={<Main/>}/>
          <Route path="/addtobasket/:id" element={<Addtobasket/>}/>
-         <Route path='/cartpage' element={<Cartpage/>}/>
-         <Route path='/ordersummary' element={<Ordersummary/>} />
-         <Route path='/payment' element={<Payment/>} />
-         <Route path='/paymentsuccess' element={<Paymentsuccess/>} />
-         <Route path='/success' element={<Success/>} />
-         <Route path='/otp' element={<Otp/>} />
+         <Route path='/cartpage' element={<Authorization><Cartpage/></Authorization>}/>
+         <Route path='/ordersummary' element={<Authorization><Ordersummary/></Authorization>}/>
+         <Route path='/payment' element={<Authorization><Payment/></Authorization>} />
+         <Route path='/paymentsuccess' element={<Authorization><Paymentsuccess/></Authorization>} />
+         <Route path='/success' element={<Authorization><Success/></Authorization>} />
+         <Route path='/otp' element={<Authorization><Otp/></Authorization>} />
          <Route path='/login' element={<Login/>} />
            </Routes>
     )

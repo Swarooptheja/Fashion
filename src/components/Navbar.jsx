@@ -77,9 +77,9 @@ export default function Navbar() {
              <button className='btng'>
               <a id='a' href="/login">Login</a>
              </button>
-             <button className='btng'>
+             {/* <button className='btng'>
               <a id='a' href="/signup">Signup</a>
-             </button>
+             </button> */}
             
             </HStack>
           </HStack>
@@ -133,9 +133,9 @@ export default function Navbar() {
              <button className='btnn'>
               <a id='a' href="/login">Login</a>
              </button>
-             <button className='btnn'>
+             {/* <button className='btnn'>
               <a id='a' href="/signup">Signup</a>
-             </button>
+             </button> */}
             
               
 

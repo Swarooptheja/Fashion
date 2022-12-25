@@ -97,6 +97,13 @@ input{
     font-size: 18px;
     margin-top: 3rem;
 }
+#placeorder:disabled{
+    cursor: not-allowed;
+    background-color: rgb(245, 183, 183);
+}
+#placeorder:disabled:hover{
+    background-color: rgb(245, 183, 183);
+}
 #placeorder:hover{
     background-color: brown;
 }
@@ -196,10 +203,10 @@ input{
 }
 
 #increasingbutton>div>button{
-    background-color: blue;
+    background-color: red;
     padding: 13px ;
     border: none;
-    border-radius: 5rem;
+    border-radius: 1rem;
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -207,6 +214,14 @@ input{
 #increasingbutton>div>button:hover{
     cursor: pointer;
     background-color: rgb(73, 73, 248);
+}
+
+#viewallbtnwith:disabled{
+cursor: not-allowed;
+background-color: #a2a2e0;
+}
+#viewallbtnwith:disabled:hover{
+    background-color: rgb(194, 194, 241);
 }
 
 @media all and (min-width: 100px) and (max-width: 500px) {

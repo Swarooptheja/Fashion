@@ -77,7 +77,7 @@ function Change({handlestate}) {
    console.log(isErrorhouseno)
    return (
       <>
-        <Button ref={btnRef} colorScheme='blue'  onClick={onOpen}  backgroundColor="blue"  border="none"  >
+        <Button ref={btnRef} colorScheme='blue'  onClick={onOpen}  backgroundColor="blue"  border="none" cursor={"pointer"}  >
           Change/Add Address
         </Button>
         <Drawer

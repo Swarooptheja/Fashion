@@ -9,6 +9,7 @@ import {AiFillPlusCircle,AiFillMinusCircle} from "react-icons/ai"
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Viewall } from './Viewall';
+import { useEffect } from 'react';
 function Cartpage(props) {
     let localdata=JSON.parse(localStorage.getItem("alldata")) || []
     let [count,setcount]=useState(1)
@@ -31,12 +32,20 @@ function Cartpage(props) {
         })
 
     })
+    let [product,setproduct]=useState(1)
     // console.log(variant_compare_at_price,variant_price)
     let el=variant_price-200
     let [viewall,setviewall]=useState(false)
     let handlestate=(state)=>{
         setviewall(true)
        
+    }
+    let deleteproduct=(index)=>{
+        setproduct((product)=>product+1)
+       localdata.splice(index,1)
+       localStorage.setItem("alldata",JSON.stringify(localdata))
+       alert("Delete the Product from cart successfully")
+    //    setproduct(false)
     }
     let [input,setinput]=useState("")
     let [inputdis,setinputdis]=useState(false)
@@ -52,13 +61,17 @@ function Cartpage(props) {
     let onplace=()=>{
         navigate("/ordersummary")
     }
+   useEffect(()=>{
+    console.log(product)
+   
+   },[product])
     return (
         <>
             <div id="cartpagemain" >
                 <div id='cartpageleft'>
                 <h3 id='fashionbasket'>Fashion Basket ({arr.length} Items)  </h3>
                     {
-                        arr.length>0 && arr.map((el)=>{
+                        arr.length>0 && arr.map((el,index)=>{
                             let  photo = el.images.split("|");
                              console.log(arr)
                                 return (
@@ -90,6 +103,12 @@ function Cartpage(props) {
                                             <div>
                                             <p>SAVE FOR LATER</p>
                                             </div>
+                                            <div id="increasingbutton">
+                                               <div>
+                                                <button onClick={()=>deleteproduct(index)}>Delete</button>
+                                               </div>
+                                            </div>
+                                            
                                             {/* <div id='increasingbutton'>
                                                 <div>
                                                     <button disabled={count==0} onClick={handlereduce}>-</button>
@@ -130,12 +149,12 @@ function Cartpage(props) {
                             <div>
                                 <h2 id='couponapply'>Apply Coupon</h2>
                             </div>
-                            {inputdis?
+                            {inputdis || localdata.length==0?
                         "":
                             <div>
                                <button id='viewall'>
                                 {/* <Viewall/> */}
-                                <Viewall handlestate={handlestate} disabled={inputdis==true} />
+                                <Viewall handlestate={handlestate} disabled={inputdis==true || localdata.length==0} />
                                </button>
                             </div>
 }
@@ -143,7 +162,7 @@ function Cartpage(props) {
                         
 
                         {
-                            viewall?"":
+                            viewall || localdata.length==0?"":
                         
                         <div id='inputfield'>
                            
@@ -153,7 +172,7 @@ function Cartpage(props) {
                             <input type="text" placeholder='Enter Coupon Code Here' value={input} onChange={(e)=>setinput(e.target.value)}  />
                             </div>
                             <div>
-                                <button id='apply' onClick={handleclick}>Apply</button>
+                                <button id='apply' disabled={localdata.length==0} onClick={handleclick}>Apply</button>
                             </div>
 
                         </div>
@@ -221,7 +240,7 @@ function Cartpage(props) {
                         
                        
                     </div>
-                    <button id='placeorder' onClick={onplace} >Place order</button>
+                    <button id='placeorder' disabled={localdata.length==0} onClick={onplace} >Place order</button>
                 </div>
             </div>
             

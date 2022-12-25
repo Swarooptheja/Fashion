@@ -12,7 +12,7 @@ import {
   } from '@chakra-ui/react';
   import React from 'react';
 import { useState } from 'react';
-function Viewall({handlestate}) {
+function  Viewall({handlestate}) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
     let [state,setstate]=useState(false)
@@ -24,7 +24,7 @@ function Viewall({handlestate}) {
   
     return (
       <>
-        <Button ref={btnRef} colorScheme='blue'  onClick={onOpen}  backgroundColor="blue"  border="none"  >
+        <Button ref={btnRef} colorScheme='blue' id='viewallbtnwith'  onClick={onOpen}  backgroundColor="blue"  border="none"  >
           View All
         </Button>
         <Drawer

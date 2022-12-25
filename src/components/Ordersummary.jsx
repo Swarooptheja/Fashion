@@ -187,7 +187,7 @@ function Ordersummary(props) {
                         
                        
                     </div>
-                    <button id='placeorder'onClick={handlemakepayment} >Make Payment</button>
+                    <button id='placeorder'onClick={handlemakepayment} disabled={address.length==0 || localdata.length==0} >Make Payment</button>
                 </div>
             </div>
             

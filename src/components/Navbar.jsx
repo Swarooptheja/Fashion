@@ -84,6 +84,7 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
+            <h1 color='white'>Fashion</h1>
             {/* <Button
               variant={'solid'}
               color="white"

@@ -48,9 +48,12 @@ export const Login = () => {
         }
         dispatch(getdata(payload))
        .then((res)=>{
+        console.log(res)
         if(res.type==login){
+          alert("Login Success")
           navigate(location.state.from || "/", {replace:"true"})
         }
+       
        })
        
     }
@@ -67,12 +70,14 @@ export const Login = () => {
   return (
     <>
       <div id='loginmain'>
+        
+
       <FormControl isInvalid={isError}>
       {/* <FormLabel>Email</FormLabel> */}
-      <div>
 
-      <Input type='email' placeholder='Enter your email here'  name="email" value={states.email} onChange={handlechange}   width='auto' />
-      </div>
+
+      <Input type='email' placeholder='Enter your email here'  name="email"  value={states.email} onChange={handlechange} my={4} variant='flushed' borderTop={"none"} borderLeft={"none"} borderRight={"none"}/>
+     
       {!isError ? (
         <FormHelperText>
          
@@ -83,12 +88,11 @@ export const Login = () => {
       )}
     </FormControl>
     <FormControl isInvalid={ispassword}>
-      <div>
         
-      </div>
+     
       <InputGroup size="md">
-      <Input type={show ? 'text' : 'password'}
- placeholder='Enter your password here' name="password" value={states.password} onChange={handlechange} width='auto' />
+      <Input type={show ? 'text' : 'password'} variant='flushed'
+ placeholder='Enter your password here' name="password" value={states.password} onChange={handlechange}  borderTop={"none"} borderLeft={"none"} borderRight={"none"}  />
       <InputRightElement width='4.5rem'>
         <Button h='1.75rem' size='sm' onClick={handleClick}>
           {show ? 'Hide' : 'Show'}
@@ -106,8 +110,8 @@ export const Login = () => {
       </InputGroup>
     </FormControl>
 
-    <button id='submitbtn' onClick={handlesubmit} disabled={isError==true || ispassword==true} >Submit</button>
         </div>   
+    <button id='submitbtn' onClick={handlesubmit} disabled={isError==true || ispassword==true} >Submit</button>
     </>
   )
 }

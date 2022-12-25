@@ -8,6 +8,7 @@
     font-weight: bold;
     font-size: 18px;
     border-radius: 1rem;
+    cursor: pointer;
 }
 #submitbtn:hover{
     background-color: rgb(120, 120, 223);
@@ -18,4 +19,11 @@ background-color: rgb(198, 198, 241);
 }
 #submitbtn:disabled:hover{
     cursor: not-allowed;
+}
+
+#loginmain{
+    width: 40%;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: 2rem;
 }

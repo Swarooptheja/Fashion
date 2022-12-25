@@ -36,6 +36,9 @@ let getdata=(payload)=>(dispatch)=>{
         // console.log(res.data)
         return dispatch(Loginsuccess(res.data))
     })
+    .catch((error)=>{
+        alert("Invalid login credential please login again")
+    })
 }
 
 export {Successdata,Failuredata,Reqdata,getdata}

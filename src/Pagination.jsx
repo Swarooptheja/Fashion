@@ -10,8 +10,8 @@ function Pagination() {
   });
  
   let dispatch = useDispatch();
-  let [currentpage, setcurrentpage] = useState("");
-  let [postperpage, setpostperpage] = useState(50);
+  let [currentpage, setcurrentpage] = useState(1);
+  let [postperpage, setpostperpage] = useState(30);
   //  let [searchParams,setSearchParams]=useSearchParams()
   let lastPostIndex = currentpage * postperpage;
   let firstpostindex = lastPostIndex - postperpage;
@@ -37,9 +37,18 @@ function Pagination() {
     dispatch(Successdata(currentposts));
   };
   return (
+    <div id="pagemain">
+      <div>
+
+      <h3 id="pageh3">Pages :</h3>
+      </div>
     <div id="paginationbuttonbutton">
+      {/* <h2>Pages : </h2> */}
       {pages.map((el, index) => {
         return (
+          // <h2>pages</h2>
+          <>
+          {/* <h2>page</h2> */}
           <button
             id="paginationbutton"
             key={index}
@@ -47,8 +56,10 @@ function Pagination() {
           >
             {el}
           </button>
+          </>
         );
       })}
+    </div>
     </div>
   );
 }

@@ -17,13 +17,12 @@ function App() {
     <div className="App">
       {/* <h1>welcome</h1> */}
       <Navbar/>
+
+      {/* <Pagination/> */}
       {/* <WithSubnavigation/> */}
       <Allroutes/>
       <Footer/>
-       {/* <Main/> 
-      <Pagination/> 
-      <Home/> 
-      <Addtobasket/> */}
+      
     </div>
   );
 }

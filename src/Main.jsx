@@ -21,7 +21,7 @@ function Main(props) {
     },[])
     return (
         <div>
-
+          <Pagination/>
             <div id='mainpagetop' >
                 <div>
                     
@@ -62,7 +62,7 @@ function Main(props) {
             </div>
            
             </div>
-            <Pagination/>
+            {/* <Pagination/> */}
         </div>
     );
 }

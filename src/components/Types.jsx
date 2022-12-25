@@ -4,3 +4,4 @@ export let failure="failure"
 export let request="request"
 
 export let login="login"
+export let loginfail="loginfail"

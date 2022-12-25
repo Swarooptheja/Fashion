@@ -14,11 +14,11 @@ function Addtobasket(props) {
     let data=useSelector((state)=>{
         return state.mainArr
     })
-    // console.log(data)
-    let filter=data.filter((el)=>{
-        return el.ID==id
-    })
-    console.log(filter)
+    console.log(data)
+   let filter=data.filter((el)=>{
+    return el.ID==id
+   })
+   console.log(filter)
     return (
         <div id='addtobasketmain' >
            <div id='addtobasketleft'>

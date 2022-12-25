@@ -12,7 +12,7 @@ Member 1 : Theja Swaroop
  
 </p>
 
-<h2>Fasion</h2>
+<h2>Fashion</h2>
 
 I have made this website with the help of ReactJS.
 Our website is resposible for mobile ,tablet , laptop.

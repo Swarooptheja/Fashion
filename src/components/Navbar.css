@@ -2,10 +2,10 @@
 #navbarmain{
 width: 100%;
 margin: auto;
-border: 1px solid #4A5568;
+border: 1px solid #2773f5;
 position: sticky;
 top: 0px;
-background-color:#4A5568;
+background-color:#2773f5;
 /* position: fixed; */
 /* margin-top: 10%; */
  z-index: 100;
@@ -23,6 +23,10 @@ background-color:#4A5568;
  
  z-index: 1; */ 
 
+}
+
+#color{
+    color: white;
 }
 
 
@@ -58,7 +62,7 @@ background-color:#4A5568;
 }
 .btng:hover{
     cursor: pointer;
-    background-color: blue;
+    background-color: red;
 }
 #a{
     text-decoration: none;
@@ -70,7 +74,7 @@ background-color:#4A5568;
     /* margin: auto; */
     /* border: 1px solid red;
      */
-     background-color: blue;
+     background-color: #4A5568;
      border: none;
      padding: 10px 20px 10px 20px;
      border-radius: 0.5rem;

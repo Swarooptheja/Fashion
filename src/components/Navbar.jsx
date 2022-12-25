@@ -51,7 +51,7 @@ export default function Navbar() {
   }
   return (
     <div id='navbarmain'>
-      <Box bg={useColorModeValue('gray.600', 'gray.100')}   px={4}>
+      <Box bg={useColorModeValue('2773f5', 'gray.100')}   px={4}>
         <Flex h={20} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'lg'}
@@ -84,7 +84,7 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <h1 color='white'>Fashion</h1>
+            <h1 id='color' color='white'>Fashion</h1>
             {/* <Button
               variant={'solid'}
               color="white"
